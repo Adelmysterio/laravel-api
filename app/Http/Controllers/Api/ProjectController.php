@@ -16,4 +16,13 @@ class ProjectController extends Controller
             'response' => $projects
         ]);
     }
+
+    public function show(String $id)
+    {
+        $project = Project::findOrFail($id);
+        return response()->json([
+            'success' => true,
+            'response' => $project,
+        ]);
+    }
 }

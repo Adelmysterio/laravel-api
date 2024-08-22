@@ -22,6 +22,7 @@ class ProjectSeeder extends Seeder
             $newProject->name = $faker->name();
             $newProject->content = $faker->realText();
             $newProject->url = $faker->url();
+            $newProject->image = $faker->imageUrl();
             $newProject->save();
         }
     }
